@@ -37,6 +37,14 @@
 - 可以通过Web界面配置账号、监控状态以及代理设置
 - Wiki教程 https://github.com/Riniba/TelegramMonitor/wiki
 
+
+ docker build -t opentmimage:latest .
+ docker run -d \
+  --name telegram-monitor \
+  --restart unless-stopped \
+  -p 25005:5005 \
+  opentmimage:latest
+
 ### 演示网站
 - 关键词管理演示：https://telegrammonitor.riniba-demo.com/keywords.html
 - Telegram管理演示：https://telegrammonitor.riniba-demo.com/telegram.html
